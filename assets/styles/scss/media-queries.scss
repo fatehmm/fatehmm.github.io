@@ -232,3 +232,13 @@
         margin-top: 50vh;
     }
 }
+
+@media screen and (min-width:1920px){
+    #hero{
+        height:60vh !important;
+        #hero-section{
+            height: 100%;
+        }
+    }
+    
+}
