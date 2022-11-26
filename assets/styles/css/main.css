@@ -1,0 +1,387 @@
+:root {
+  --primary-color: #4E16A8;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  height: 500vh;
+  overflow-x: hidden;
+}
+
+header {
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  position: relative;
+}
+
+main {
+  z-index: -4 !important;
+  margin: 0;
+  padding: 0;
+}
+
+#nav {
+  background-color: #FFF;
+  position: fixed;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  height: 10vh;
+  border-bottom: 0px solid rgb(156, 155, 155);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  display: flex;
+  align-items: center;
+}
+#nav #offcanvas {
+  z-index: 1000 !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-animation-name: "animationOpening";
+          animation-name: "animationOpening";
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  transition: 800ms;
+  position: absolute;
+  background-color: var(--primary-color);
+  width: 50vw;
+  height: 45vh;
+  top: 10vh;
+  right: 0;
+}
+#nav #offcanvas ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50%;
+}
+#nav #offcanvas ul li {
+  text-align: end;
+}
+#nav #offcanvas ul li a {
+  color: #FFF;
+  font-weight: 500;
+  font-family: "Cerebri Sans", "Times New Roman", Times, serif;
+  font-size: 1rem;
+  text-align: end;
+}
+#nav #offcanvas ul li a:hover {
+  transform: translate(-20px);
+  transition: 0.5s;
+}
+#nav #offcanvas .last-ul a {
+  font-size: 1rem;
+}
+#nav #offcanvas .first-ul {
+  margin-bottom: 0;
+}
+#nav #offcanvas .first-ul, #nav #offcanvas .last-ul {
+  list-style: none;
+  color: #FFF;
+  font-size: 500;
+  font-family: "Cerebri Sans", "Times New Roman", Times, serif;
+  font-size: 1rem;
+  text-align: end;
+}
+#nav #offcanvas .first-ul #last-li::before, #nav #offcanvas .last-ul #last-li::before {
+  position: absolute;
+  left: 60%;
+  content: "";
+  background-color: #FFF;
+  color: #FFF;
+  height: 2px;
+  width: 150px;
+  transform: translate(-92px, 61px);
+}
+#nav #offcanvas .last-ul {
+  font-size: 0.8rem;
+}
+#nav a {
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+}
+#nav #logo-wrapper {
+  height: 100%;
+  align-items: center;
+}
+#nav #logo-nav {
+  height: 4vh;
+  width: auto;
+  padding: 0 1.5rem 0 2rem;
+  display: flex;
+  align-items: center;
+}
+#nav #logo-span {
+  font-family: "Cerebri Sans", "Times New Roman", Times, serif;
+  color: #4E16A8;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+#nav #hamburgir-div {
+  display: flex;
+  flex-direction: row-reverse;
+  float: right;
+}
+#nav #hamburgir-div #hamburger-wrapper {
+  transform: scale(0.5);
+  height: 3vh;
+  display: flex;
+  align-items: center;
+}
+#nav #hamburgir-div #hamburger-wrapper #nav-icon4 span {
+  color: #000;
+  background-color: #4E16A8;
+  height: 5px !important;
+}
+
+#hero {
+  position: relative;
+  top: 15vh;
+  height: 40vh;
+  display: grid;
+  place-items: center;
+  font-family: "Cerebri Sans", "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+.hero-section {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.hero-section__title {
+  text-align: center;
+  font-size: clamp(1.5rem, 29px, 4rem);
+  font-weight: 700;
+  padding: 50px 10% 10px 10%;
+}
+.hero-section__title h1, .hero-section__title h2 {
+  margin: 0;
+}
+.hero-section__title h1 {
+  color: var(--primary-color);
+}
+.hero-section__description {
+  text-align: center;
+  padding: 1rem 10%;
+  font-weight: 500;
+}
+.hero-section__img {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.hero-section__img img {
+  width: clamp(100px, 60%, 350px);
+}
+
+#less-price {
+  position: relative;
+  top: 10vh;
+}
+#less-price div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#less-price h2 {
+  padding: 10px 10%;
+  font-family: "Cerebri Sans", "Times New Roman", Times, serif;
+  font-weight: 500;
+  text-align: center;
+}
+#less-price .less-price--img {
+  display: grid;
+  place-items: center;
+}
+#less-price .less-price--img img {
+  width: 70% !important;
+}
+
+#traveler {
+  position: relative;
+  top: 10vh;
+}
+#traveler div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#traveler h2 {
+  padding: 10px 10%;
+  font-family: "Cerebri Sans", "Times New Roman", Times, serif;
+  font-weight: 500;
+  text-align: center;
+}
+#traveler .traveler--img {
+  display: grid;
+  place-items: center;
+}
+#traveler .traveler--img img {
+  width: clamp(100px, 60%, 350px);
+}
+
+.button-main {
+  border: none;
+  background-color: #4E16A8;
+  border-radius: 10px;
+  padding: 5px 15px;
+  color: #FFF;
+  font-size: 1rem !important;
+}
+.button-main:hover {
+  background-color: #7c3be5 !important;
+  transition: 0.5s;
+}
+
+.closed {
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url(../../fonts/CerebriSansPro-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url(../../fonts/CerebriSansPro-Light.otf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url(../../fonts/CerebriSansPro-Thin.otf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url(../../fonts/CerebriSansPro-Bold.otf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url(../../fonts/CerebriSansPro-ExtraBold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url(../../fonts/CerebriSansPro-Heavy.otf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url(../../fonts/CerebriSansPro-Medium.otf);
+  font-weight: 500;
+}
+/* Icon 4 */
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 50px auto;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #d3531a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+  top: 18px;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+  top: 36px;
+  transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+}
+
+@-webkit-keyframes animateOpening {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes animateOpening {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.tilt {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  opacity: 1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+h2 span {
+  color: #4E16A8;
+}/*# sourceMappingURL=main.css.map */
