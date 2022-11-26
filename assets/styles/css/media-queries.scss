@@ -50,8 +50,18 @@
         }
     }
 }
+@media screen and (min-width:900px){
+    #hero, #less-price, #traveler{
+        margin: 0 auto !important;
+    }
+    footer{
+        margin-top: 50vh;
+    }
+}
 @media screen and (min-width:768px) {
-    
+    footer{
+        top: 40vh;
+    }
    #hero{
     position: relative;
     display: flex;
@@ -60,7 +70,7 @@
    }
    #less-price,#traveler{
     position: relative;
-    top: 50vh;
+    // top: 50vh;
     h2{
         width: 70%;
         text-align: end;
@@ -98,6 +108,47 @@
             }
         }
     }
+    #hero{
+        h2{
+            font-size: 3rem;
+        }
+        h1{
+            font-size: 3.2rem;
+        }
+    }
+    #sign-up{
+        position: relative;
+        h2,p{
+            text-align: center !important;
+            
+        }
+        h2{
+            font-size: 3rem;
+            padding: 0 15%;
+        }
+        p{
+            padding: 90px 0 20px 0 !important;
+        }
+        .form-div{
+            display: flex;
+            flex-direction: row;
+            *{
+                margin-left: 10px;
+            }
+        }
+        .form-wrapper-div{
+        }
+        .form-wrapper-div__img{
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            width: 100vw;
+            img{
+                width: 100vw !important;
+            }
+        }
+        }
+    
 
 }
 @media screen and (max-width:768px){
@@ -107,7 +158,77 @@
     
 }
 @media screen and (max-width:576px){
-    #hero{
+    #hero, #less-price, #traveler{
         height: 100vh;
+    }
+    h2, p{
+        text-align: center;
+        padding: 0 15%;
+        position: relative;
+    }
+    img{
+        margin-top: 10;
+    }
+    #less-price{
+         margin-top: 120px;
+    }
+    .form-wrapper-div{
+        &__img{
+            width: 100vw;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+}
+@media screen and (max-width:400px){
+    img{
+        width: 70vw;
+    }
+    .form-wrapper-div{
+        &__img{
+            width: 100vw;
+            img{
+                width: 100vw;
+            }
+        }
+    }
+    footer{
+        .logo-div{
+            &__wrapper{
+                display: grid;
+                place-items: left;
+            }
+        }
+        .listings-wrapper{
+            display: block;
+            margin: 10px 0 0 30px;
+            ul{
+                padding: 0;
+            }
+
+        }
+        .social-media-wrapper{
+            margin: 10px 0px 0px 30px;
+            float: left;
+            width: fit-content;
+            ul{
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1400px){
+    #hero{
+        height: 100vh !important;
+    }
+    #features{
+        height: 100vh !important;
+        margin-bottom: 15%;
+    }
+    footer{
+        margin-top: 50vh;
     }
 }

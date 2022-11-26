@@ -14,7 +14,6 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box;
-  height: 500vh;
   overflow-x: hidden;
 }
 
@@ -31,7 +30,25 @@ main {
   padding: 0;
 }
 
+@-webkit-keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #nav {
+  opacity: 1;
   background-color: #FFF;
   position: fixed;
   width: 100vw;
@@ -54,10 +71,8 @@ main {
   overflow-y: scroll;
   -webkit-animation-name: "animationOpening";
           animation-name: "animationOpening";
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: cubic-bezier(0.11, 1.14, 0.66, 0.78);
+          animation-timing-function: cubic-bezier(0.11, 1.14, 0.66, 0.78);
   transition: 800ms;
   position: absolute;
   background-color: var(--primary-color);
@@ -67,6 +82,12 @@ main {
   right: 0;
 }
 #nav #offcanvas ul {
+  -webkit-animation-name: "opacityAnimation";
+          animation-name: "opacityAnimation";
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -352,19 +373,19 @@ main {
 
 @-webkit-keyframes animateOpening {
   from {
-    transform: scale(0);
+    opacity: 0;
   }
   to {
-    transform: scale(1);
+    opacity: 1;
   }
 }
 
 @keyframes animateOpening {
   from {
-    transform: scale(0);
+    opacity: 0;
   }
   to {
-    transform: scale(1);
+    opacity: 1;
   }
 }
 .tilt {
@@ -382,6 +403,109 @@ main {
   cursor: pointer;
 }
 
+h2 {
+  font-family: "Cerebri Sans", "Times New Roman", Times, serif;
+  font-weight: 500;
+}
 h2 span {
   color: #4E16A8;
+}
+
+p {
+  font-family: "Cerebri Sans", "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 1.2rem !important;
+  padding: 0 !important;
+}
+
+#sign-up {
+  position: relative;
+  top: 10vh;
+}
+
+.form-wrapper-div {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-div input {
+  background-color: #D2D2D2;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.form-div button {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  font-family: "Cerebri Sans", "Times New Roman", Times, serif;
+  font-weight: 500;
+  padding: 8px 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: #4E16A8;
+  color: white;
+}
+.form-div input, .form-div button {
+  margin: 10px 0;
+}
+
+footer {
+  height: 30vh;
+  position: relative;
+  top: 10vh;
+}
+footer a {
+  text-decoration: none;
+  color: #4E16A8;
+}
+footer a:hover {
+  color: #7c3be5;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer ul li {
+  font-family: "Cerebri Sans", "Times New Roman", Times, serif;
+  font-weight: 300;
+  cursor: pointer;
+}
+footer .social-media-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .social-media-ul {
+  display: flex;
+}
+footer .social-media-ul li {
+  margin: 0 10px;
+}
+footer .listings-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .logo-div__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .logo-div__wrapper span {
+  font-family: "Cerebri Sans", "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+footer .logo-div__wrapper__img {
+  height: 2rem;
+  margin-right: 10px;
+}
+footer .logo-div__wrapper__img img {
+  height: 90% !important;
 }/*# sourceMappingURL=main.css.map */
