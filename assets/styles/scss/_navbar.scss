@@ -1,0 +1,18 @@
+header{
+    height: 57px;
+    position: relative;
+    .navbar {
+        position: fixed;
+        width: 100vw;
+        .navbar-brand{
+            font-weight: 500;
+        }
+        .signup-button{
+            background-color: #4E16A8 !important;
+            color: #fff;
+            &:hover{
+                background-color: #3D0E7A !important;
+            }
+        }
+    }
+}

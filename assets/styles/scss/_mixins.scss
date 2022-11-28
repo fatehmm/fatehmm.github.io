@@ -1,0 +1,18 @@
+@mixin title-colors{
+    color: #4e16a8;
+}
+@mixin make-container($padding-x: $container-padding-x) {
+    width: 100%;
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+@mixin image-div{
+        // width: 100%;
+        height: auto;
+        img{
+            width: clamp(100px, 300px, 400px);
+        }
+}
