@@ -26,6 +26,10 @@ h3 span {
   margin: 10px 0;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 * {
   font-family: "Cerebri Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
@@ -59,6 +63,7 @@ h3 span {
 header {
   height: 57px;
   position: relative;
+  z-index: 10000000;
 }
 header .navbar {
   position: fixed;
@@ -114,6 +119,31 @@ header .navbar .signup-button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .prices-travelers > .container-lg {
+    transform: scale(1.5) translate(-3%, 27%);
+    height: 30vh;
+  }
+  .hero > .container-lg {
+    transform: scale(1.5) translate(-3%, 50%);
+    height: 30vh;
+  }
+  .hero, .prices-travelers, .email {
+    position: relative;
+    height: 90vh;
+  }
+  main {
+    z-index: -100;
+  }
+  .nav {
+    z-index: 100000000000000030000000;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .email > .container-lg {
+    transform: scale(1.5) translate(-3%, 130%);
   }
 }
 .image-wrapper {

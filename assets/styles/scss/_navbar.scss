@@ -1,6 +1,7 @@
 header{
     height: 57px;
     position: relative;
+    z-index: 10000000;
     .navbar {
         position: fixed;
         width: 100vw;
