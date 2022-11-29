@@ -1,3 +1,8 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 h3 span {
   color: #4e16a8;
   font-weight: 500;
@@ -80,6 +85,10 @@ header .navbar .signup-button:hover {
   background-color: #3D0E7A !important;
 }
 
+.hero h2, .hero h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
 .hero__image-wrapper {
   height: auto;
 }
